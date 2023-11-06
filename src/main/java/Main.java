@@ -10,13 +10,9 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         Main main = new Main();
-        try {
             main.run(scanner);
-        } catch (IOException e) {
-            throw new FileNotFoundException("Brak pliku ");
-
         }
-    }
+
 
     void run(Scanner scanner) throws FileNotFoundException{
         scanner = new Scanner(System.in);
