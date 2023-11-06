@@ -1,5 +1,3 @@
-
-import java.io.FileNotFoundException;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -11,7 +9,7 @@ public class Main {
         main.run(scanner);
     }
 
-    void run(Scanner scanner){
+    void run(Scanner scanner) {
         scanner = new Scanner(System.in);
         System.out.println("Podaj kod kraju, o którym chcesz zobaczyć informacje: ");
         String country = scanner.nextLine();
