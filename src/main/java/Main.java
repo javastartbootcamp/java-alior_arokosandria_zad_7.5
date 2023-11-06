@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
         Main main = new Main();
@@ -14,13 +14,12 @@ public class Main {
         }
 
 
-    void run(Scanner scanner) throws FileNotFoundException{
+    void run(Scanner scanner){
         scanner = new Scanner(System.in);
         System.out.println("Podaj kod kraju, o którym chcesz zobaczyć informacje: ");
         String country = scanner.nextLine();
         String file="countries.csv";
         Files files=new Files();
-        try {
             Map<String, Country> countryMap = files.readFile(file);
             Country country1 = null;
             for (Map.Entry<String, Country> entry : countryMap.entrySet()) {
@@ -33,10 +32,8 @@ public class Main {
             if (country1 == null) {
                 System.out.println("Kod kraju " + country + " nie został znaleziony");
             }
-        }catch (IOException e) {
-            throw new FileNotFoundException("Brak pliku " + file + ".");
         }
 
 
     }
-}
+
