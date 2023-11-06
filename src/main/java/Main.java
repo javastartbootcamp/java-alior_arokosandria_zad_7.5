@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Map;
 import java.util.Scanner;
@@ -14,8 +15,9 @@ public class Main {
         scanner = new Scanner(System.in);
         System.out.println("Podaj kod kraju, o którym chcesz zobaczyć informacje: ");
         String country = scanner.nextLine();
-        Files files = new Files();
-        Map<String, Country> countryMap = files.readFile();
+        String file="countries.csv";
+        Files files=new Files();
+        Map<String, Country> countryMap = files.readFile(file);
         Country country1 = null;
         for (Map.Entry<String, Country> entry : countryMap.entrySet()) {
             if (country.equals(entry.getKey())) {
