@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Main main = new Main();
         main.run(scanner);
     }
 
-    void run(Scanner scanner) throws FileNotFoundException {
+    void run(Scanner scanner){
         scanner = new Scanner(System.in);
         System.out.println("Podaj kod kraju, o którym chcesz zobaczyć informacje: ");
         String country = scanner.nextLine();
