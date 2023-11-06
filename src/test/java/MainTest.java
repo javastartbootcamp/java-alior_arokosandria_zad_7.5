@@ -51,7 +51,7 @@ public class MainTest {
     }
 
     @Test
-    void shouldDisplayMessageWhenNoFile() {
+    void shouldDisplayMessageWhenNoFile() throws Exception {
         // given
 
         File file = new File("countries.csv");
