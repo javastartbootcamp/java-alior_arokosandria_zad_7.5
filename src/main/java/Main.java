@@ -21,22 +21,10 @@ public class Main {
         Files files=new Files();
         try {
             Map<String, Country> countryMap = files.readFile(file);
-            Country country1 = null;
-            for (Map.Entry<String, Country> entry : countryMap.entrySet()) {
-                if (country.equals(entry.getKey())) {
-                    country1 = entry.getValue();
-                    System.out.println(country1.getCountryName() + " " + "(" + country1.getCode() + ")" + " ma " + country1.getAmountPeople() + " ludności");
-                    return;
-                }
             }
-            if (country1 == null) {
-                System.out.println("Kod kraju " + country + " nie został znaleziony");
-            }
-        }catch (FileNotFoundException e){
-
+        catch (FileNotFoundException e){
+            System.out.println("Brak pliku " + file + ".");
         }
-
-
     }
 }
 
