@@ -16,6 +16,9 @@ public class Main {
         System.out.println("Podaj kod kraju, o którym chcesz zobaczyć informacje: ");
         String country = scanner.nextLine();
         File file=new File("countries.csv");
+        if(!file.exists()){
+            System.out.println("Brak pliku");
+        }
         Files files=new Files();
             Map<String, Country> countryMap = files.readFile(file);
             Country country1 = null;
