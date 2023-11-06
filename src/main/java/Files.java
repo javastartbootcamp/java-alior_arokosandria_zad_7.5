@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class Files {
-    public Map<String, Country> readFile() throws FileNotFoundException {
+    public Map<String, Country> readFile() {
         Map<String, Country> countryMap = new HashMap<>();
         File file = new File("countries.csv");
         try (Scanner scanner = new Scanner(file)) {
@@ -13,7 +13,7 @@ public class Files {
                 countryMap.put(elements[0], new Country(elements[0], elements[1], Integer.parseInt(elements[2])));
             }
         } catch (IOException e) {
-            throw new FileNotFoundException("Brak pliku " + file.getName() + ".");
+            System.out.println("Brak pliku " + file.getName() + ".");
         }
 
         return countryMap;
