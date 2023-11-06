@@ -1,24 +1,21 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args){
-
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(System.in);
         Main main = new Main();
             main.run(scanner);
         }
 
 
-    void run(Scanner scanner){
-        scanner = new Scanner(System.in);
+    void run(Scanner scanner) throws FileNotFoundException {
         System.out.println("Podaj kod kraju, o którym chcesz zobaczyć informacje: ");
         String country = scanner.nextLine();
-        String file="countries.csv";
+        File file=new File("countries.csv");
         Files files=new Files();
             Map<String, Country> countryMap = files.readFile(file);
             Country country1 = null;

@@ -1,3 +1,4 @@
+import com.sun.tools.javac.Main;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -51,7 +52,7 @@ public class MainTest {
     }
 
     @Test
-    void shouldDisplayMessageWhenNoFile() throws Exception {
+    void shouldDisplayMessageWhenNoFile() {
         // given
 
         File file = new File("countries.csv");
@@ -66,6 +67,7 @@ public class MainTest {
 
         // when
         main.run(scanner);
+
 
         // then
         assertThat(outContent.toString()).contains("Brak pliku countries.csv.");
