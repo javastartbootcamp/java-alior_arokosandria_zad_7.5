@@ -21,7 +21,8 @@ public class Main {
             if (countryName == null) {
                 System.out.println("Kod kraju " + country + " nie został znaleziony.");
             } else {
-                System.out.println(countryName.getCountryName() + " " + "(" + countryName.getCode() + ")" + " ma " + countryName.getAmountPeople() + " ludności.");
+                System.out.println(countryName.getCountryName() + " " + "(" + countryName.getCode() + ")" + " ma "
+                        + countryName.getAmountPeople() + " ludności.");
             }
 
         } else {
