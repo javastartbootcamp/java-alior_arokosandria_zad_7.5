@@ -17,7 +17,12 @@ public class Main {
             String country = scanner.nextLine();
             Files files = new Files();
             Map<String, Country> countryMap = files.readFile(filePath);
-            Country.viewCountry(countryMap, country);
+            Country countryName = countryMap.get(country);
+            if (countryName == null) {
+                System.out.println("Kod kraju " + country + " nie został znaleziony.");
+            } else {
+                System.out.println(countryName.getCountryName() + " " + "(" + countryName.getCode() + ")" + " ma " + countryName.getAmountPeople() + " ludności.");
+            }
 
         } else {
             System.out.println("Brak pliku " + filePath + ".");
