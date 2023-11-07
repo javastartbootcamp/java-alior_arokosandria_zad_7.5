@@ -29,7 +29,7 @@ public class Main {
                 System.out.println("Kod kraju " + country + " nie został znaleziony");
             }
         }else{
-            System.out.println("Plik nie istnieje");
+            System.out.println("Brak pliku "+filePath+".");
         }
     }
 
