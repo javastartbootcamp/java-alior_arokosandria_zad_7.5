@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.UncheckedIOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -13,7 +14,7 @@ public class Files {
                 countryMap.put(elements[0], new Country(elements[0], elements[1], Integer.parseInt(elements[2])));
             }
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            throw new UncheckedIOException(e);
         }
         return countryMap;
     }
